@@ -44,6 +44,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="minusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJN-jq-0XY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVP-BC-CpQ">
                                 <rect key="frame" x="255" y="156" width="44" height="44"/>
@@ -59,6 +62,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="plusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEP-hN-9Jq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-BW-0d7">
                                 <rect key="frame" x="115" y="272" width="44" height="44"/>
@@ -72,6 +78,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="d4Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZfB-iG-1Pq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-kq-LIL">
                                 <rect key="frame" x="255" y="272" width="44" height="44"/>
@@ -85,6 +94,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="d6Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WG1-NI-F0w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVd-Tv-kbI">
                                 <rect key="frame" x="115" y="332" width="44" height="44"/>
@@ -98,6 +110,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="d8Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3j-Nr-Sn9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-Li-eco">
                                 <rect key="frame" x="255" y="332" width="44" height="44"/>
@@ -111,6 +126,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="d10Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mIf-21-SvT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-9E-ZRh">
                                 <rect key="frame" x="115" y="392" width="44" height="44"/>
@@ -124,6 +142,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="d12Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TlR-tM-zGP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxR-c6-N0y">
                                 <rect key="frame" x="255" y="392" width="44" height="44"/>
@@ -137,6 +158,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="d20Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1v-NF-sx9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-LT-Mjo">
                                 <rect key="frame" x="185" y="452" width="44" height="44"/>
@@ -150,6 +174,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="d100Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZJt-qg-gfD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5W-OY-Ljb">
                                 <rect key="frame" x="32" y="796" width="350" height="50"/>
@@ -161,6 +188,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="rollTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxS-ga-raX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -197,6 +227,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="d100Button" destination="6Ce-LT-Mjo" id="w3v-Ym-Dfb"/>
+                        <outlet property="d10Button" destination="UWI-Li-eco" id="mbk-jY-QKL"/>
+                        <outlet property="d12Button" destination="Wpp-9E-ZRh" id="7Ow-si-aCm"/>
+                        <outlet property="d20Button" destination="zxR-c6-N0y" id="6wq-W6-3Zc"/>
+                        <outlet property="d4Button" destination="7gg-BW-0d7" id="0fc-US-ENE"/>
+                        <outlet property="d6Button" destination="aFu-kq-LIL" id="RpU-El-A41"/>
+                        <outlet property="d8Button" destination="xVd-Tv-kbI" id="qlX-6a-t3M"/>
+                        <outlet property="diceNumberTextField" destination="71G-eO-p4F" id="ow9-jb-tBO"/>
+                        <outlet property="minusButton" destination="iO9-Fr-Bft" id="dV1-WO-aIU"/>
+                        <outlet property="plusButton" destination="qVP-BC-CpQ" id="wvq-12-Hng"/>
+                        <outlet property="resultLabel" destination="G66-WD-5rJ" id="l1D-uN-EMy"/>
+                        <outlet property="rollButton" destination="D5W-OY-Ljb" id="OSB-Az-xcd"/>
+                        <outletCollection property="dice" destination="7gg-BW-0d7" collectionClass="NSMutableArray" id="xB2-mr-anc"/>
+                        <outletCollection property="dice" destination="aFu-kq-LIL" collectionClass="NSMutableArray" id="Jk0-xR-Ter"/>
+                        <outletCollection property="dice" destination="xVd-Tv-kbI" collectionClass="NSMutableArray" id="inv-jf-cLM"/>
+                        <outletCollection property="dice" destination="UWI-Li-eco" collectionClass="NSMutableArray" id="Nyt-w5-ZVE"/>
+                        <outletCollection property="dice" destination="Wpp-9E-ZRh" collectionClass="NSMutableArray" id="y9g-3x-knU"/>
+                        <outletCollection property="dice" destination="zxR-c6-N0y" collectionClass="NSMutableArray" id="bMA-k5-7UY"/>
+                        <outletCollection property="dice" destination="6Ce-LT-Mjo" collectionClass="NSMutableArray" id="2Et-eS-dwO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
