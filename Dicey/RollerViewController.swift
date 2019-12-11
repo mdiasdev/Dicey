@@ -30,6 +30,7 @@ class RollerViewController: UIViewController {
     var diceNumber = 1 {
         didSet {
             diceNumberTextField.text = "\(diceNumber)"
+            setStepperButtonsAccessibility(value: diceNumber)
         }
     }
     var selectedDie: Die?
@@ -38,6 +39,7 @@ class RollerViewController: UIViewController {
         super.viewDidLoad()
         
         setupButtonBorders()
+        setupAccessibility()
     }
     
     func setupButtonBorders() {
@@ -65,6 +67,34 @@ class RollerViewController: UIViewController {
         rollButton.layer.cornerRadius = 10
     }
     
+    @objc func setupAccessibility() {
+        setResultAccessibility(value: Int(resultLabel.text!)!)
+        setStepperButtonsAccessibility(value: diceNumber)
+        
+        d4Button.accessibilityHint = "Tap to select d4 for rolling"
+        d6Button.accessibilityHint = "Tap to select d6 for rolling"
+        d8Button.accessibilityHint = "Tap to select d8 for rolling"
+        d10Button.accessibilityHint = "Tap to select d10 for rolling"
+        d12Button.accessibilityHint = "Tap to select d12 for rolling"
+        d20Button.accessibilityHint = "Tap to select d20 for rolling"
+        d100Button.accessibilityHint = "Tap to select d100 for rolling"
+        
+
+    }
+    
+    func setResultAccessibility(value: Int) {
+        resultLabel.accessibilityLabel = "Roll result"
+        resultLabel.accessibilityHint = "Current value: \(value)"
+        resultLabel.accessibilityTraits = .updatesFrequently
+    }
+    
+    func setStepperButtonsAccessibility(value: Int) {
+        minusButton.accessibilityLabel = "Subtract from number of dice being rolled"
+        minusButton.accessibilityHint = "Current number: \(value)"
+        plusButton.accessibilityLabel = "Add to number of dice being rolled"
+        plusButton.accessibilityHint = "Current number: \(value)"
+    }
+    
     func setSelected(_ button: UIButton) {
         dice.forEach { $0.isSelected = false }
         
@@ -79,6 +109,12 @@ class RollerViewController: UIViewController {
         }
         
         return result
+    }
+    
+    func updateTotal(_ value: Int) {
+        resultLabel.text = "\(value)"
+        
+        setResultAccessibility(value: value)
     }
 
     // MARK: - Actions
@@ -133,6 +169,7 @@ class RollerViewController: UIViewController {
     @IBAction func rollTapped(_ sender: UIButton) {
         guard let selectedDie = selectedDie else { return }
         
-        resultLabel.text = "\(roll(diceNumber, selectedDie))"
+        updateTotal(roll(diceNumber, selectedDie))
+        UIAccessibility.post(notification: .layoutChanged, argument: resultLabel)
     }
 }
