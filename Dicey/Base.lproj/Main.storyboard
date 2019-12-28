@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,15 +66,14 @@
                                     <action selector="plusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEP-hN-9Jq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-BW-0d7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-BW-0d7">
                                 <rect key="frame" x="115" y="272" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7gg-BW-0d7" secondAttribute="height" multiplier="1:1" id="H6D-X6-EuL"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="HEz-bP-RL7"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="vt3-8B-pGd"/>
+                                    <constraint firstAttribute="height" constant="44" id="JLj-rm-0Jv"/>
+                                    <constraint firstAttribute="width" secondItem="7gg-BW-0d7" secondAttribute="height" multiplier="1:1" id="ceg-37-uH2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="d4"/>
+                                <state key="normal" title="d4" image="d4"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -82,15 +81,14 @@
                                     <action selector="d4Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZfB-iG-1Pq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-kq-LIL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-kq-LIL">
                                 <rect key="frame" x="255" y="272" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="e6G-mX-gMx"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="nE8-Y1-6WL"/>
+                                    <constraint firstAttribute="height" constant="44" id="7N1-Rt-E3Z"/>
+                                    <constraint firstAttribute="width" secondItem="aFu-kq-LIL" secondAttribute="height" multiplier="1:1" id="DAp-Ek-oKf"/>
                                     <constraint firstAttribute="width" secondItem="aFu-kq-LIL" secondAttribute="height" multiplier="1:1" id="xGr-oH-Agc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="d6"/>
+                                <state key="normal" title="d6" image="d6"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -98,15 +96,15 @@
                                     <action selector="d6Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WG1-NI-F0w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVd-Tv-kbI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVd-Tv-kbI">
                                 <rect key="frame" x="115" y="332" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xVd-Tv-kbI" secondAttribute="height" multiplier="1:1" id="Nn0-o0-Upx"/>
+                                    <constraint firstAttribute="width" secondItem="xVd-Tv-kbI" secondAttribute="height" multiplier="1:1" id="V2V-6F-Su3"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="asr-KE-mub"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="oNe-Xp-KWQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="oNe-Xp-KWQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="d8"/>
+                                <state key="normal" title="d8" image="d8"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -114,15 +112,13 @@
                                     <action selector="d8Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3j-Nr-Sn9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-Li-eco">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-Li-eco">
                                 <rect key="frame" x="255" y="332" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UWI-Li-eco" secondAttribute="height" multiplier="1:1" id="QXb-Mu-GsJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="U9e-rJ-BtL"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="aha-1u-zos"/>
+                                    <constraint firstAttribute="height" constant="44" id="y9q-9a-2h9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="d10"/>
+                                <state key="normal" title="d10" image="d10"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -130,15 +126,14 @@
                                     <action selector="d10Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mIf-21-SvT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-9E-ZRh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-9E-ZRh">
                                 <rect key="frame" x="115" y="392" width="44" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wpp-9E-ZRh" secondAttribute="height" multiplier="1:1" id="GsJ-v5-GNk"/>
+                                    <constraint firstAttribute="height" constant="44" id="LbJ-sY-U87"/>
                                     <constraint firstAttribute="width" secondItem="Wpp-9E-ZRh" secondAttribute="height" multiplier="1:1" id="ipN-uX-jS8"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="qdL-MM-Q7q"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="w99-sx-O4n"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="d12"/>
+                                <state key="normal" title="d12" image="d12"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -146,15 +141,14 @@
                                     <action selector="d12Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TlR-tM-zGP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxR-c6-N0y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxR-c6-N0y">
                                 <rect key="frame" x="255" y="392" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="1YQ-pO-qu7"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="PDZ-qM-1ww"/>
+                                    <constraint firstAttribute="width" secondItem="zxR-c6-N0y" secondAttribute="height" multiplier="1:1" id="W0o-NJ-4w3"/>
+                                    <constraint firstAttribute="height" constant="44" id="cmO-ER-Adv"/>
                                     <constraint firstAttribute="width" secondItem="zxR-c6-N0y" secondAttribute="height" multiplier="1:1" id="rsY-ku-z2r"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="d20"/>
+                                <state key="normal" title="d20" image="d20"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -254,4 +248,12 @@
             <point key="canvasLocation" x="132" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="d10" width="137" height="137"/>
+        <image name="d12" width="137" height="137"/>
+        <image name="d20" width="137" height="137"/>
+        <image name="d4" width="137" height="137"/>
+        <image name="d6" width="134" height="133"/>
+        <image name="d8" width="137" height="137"/>
+    </resources>
 </document>

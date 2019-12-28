@@ -48,18 +48,30 @@ class RollerViewController: UIViewController {
         plusButton.layer.borderWidth = 1
         plusButton.layer.cornerRadius = 10
         
-        d4Button.layer.borderWidth = 1
+        d4Button.setImage(UIImage(named: "d4_selected"), for: .selected)
         d4Button.layer.cornerRadius = 10
-        d6Button.layer.borderWidth = 1
+        d4Button.layer.masksToBounds = true
+        
+        d6Button.setImage(UIImage(named: "d6_selected"), for: .selected)
         d6Button.layer.cornerRadius = 10
-        d8Button.layer.borderWidth = 1
+        d6Button.layer.masksToBounds = true
+        
+        d8Button.setImage(UIImage(named: "d8_selected"), for: .selected)
         d8Button.layer.cornerRadius = 10
-        d10Button.layer.borderWidth = 1
+        d8Button.layer.masksToBounds = true
+        
+        d10Button.setImage(UIImage(named: "d10_selected"), for: .selected)
         d10Button.layer.cornerRadius = 10
-        d12Button.layer.borderWidth = 1
+        d10Button.layer.masksToBounds = true
+        
+        d12Button.setImage(UIImage(named: "d12_selected"), for: .selected)
         d12Button.layer.cornerRadius = 10
-        d20Button.layer.borderWidth = 1
+        d12Button.layer.masksToBounds = true
+        
         d20Button.layer.cornerRadius = 10
+        d20Button.setImage(UIImage(named: "d20_selected"), for: .selected)
+        d20Button.layer.masksToBounds = true
+        
         d100Button.layer.borderWidth = 1
         d100Button.layer.cornerRadius = 10
         
