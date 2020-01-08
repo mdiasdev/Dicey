@@ -91,8 +91,6 @@ class RollerViewController: UIViewController {
         d12Button.accessibilityHint = "Tap to select d12 for rolling"
         d20Button.accessibilityHint = "Tap to select d20 for rolling"
         d100Button.accessibilityHint = "Tap to select d100 for rolling"
-        
-
     }
     
     func setResultAccessibility(value: Int) {

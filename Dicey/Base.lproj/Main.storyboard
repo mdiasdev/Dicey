@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RollerViewController" customModule="Dicey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G66-WD-5rJ">
-                                <rect key="frame" x="16" y="104" width="382" height="41"/>
+                                <rect key="frame" x="16" y="60" width="343" height="14"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71G-eO-p4F">
-                                <rect key="frame" x="167" y="161" width="80" height="34"/>
+                                <rect key="frame" x="147.5" y="90" width="80" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="4mV-pm-Z3C"/>
                                 </constraints>
@@ -31,7 +31,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO9-Fr-Bft">
-                                <rect key="frame" x="115" y="156" width="44" height="44"/>
+                                <rect key="frame" x="95.5" y="85" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="h5W-RN-smd"/>
                                     <constraint firstAttribute="width" secondItem="iO9-Fr-Bft" secondAttribute="height" multiplier="1:1" id="jrE-zF-K7V"/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVP-BC-CpQ">
-                                <rect key="frame" x="255" y="156" width="44" height="44"/>
+                                <rect key="frame" x="235.5" y="85" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qVP-BC-CpQ" secondAttribute="height" multiplier="1:1" id="B3Y-HB-yoK"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="S0b-N2-MQe"/>
@@ -67,11 +67,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-BW-0d7">
-                                <rect key="frame" x="115" y="272" width="44" height="44"/>
+                                <rect key="frame" x="77.5" y="201" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7gg-BW-0d7" secondAttribute="height" multiplier="1:1" id="H6D-X6-EuL"/>
-                                    <constraint firstAttribute="height" constant="44" id="JLj-rm-0Jv"/>
-                                    <constraint firstAttribute="width" secondItem="7gg-BW-0d7" secondAttribute="height" multiplier="1:1" id="ceg-37-uH2"/>
+                                    <constraint firstAttribute="height" constant="80" id="JLj-rm-0Jv"/>
                                 </constraints>
                                 <state key="normal" title="d4" image="d4"/>
                                 <userDefinedRuntimeAttributes>
@@ -82,11 +81,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-kq-LIL">
-                                <rect key="frame" x="255" y="272" width="44" height="44"/>
+                                <rect key="frame" x="217.5" y="201" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="7N1-Rt-E3Z"/>
+                                    <constraint firstAttribute="height" constant="80" id="7N1-Rt-E3Z"/>
                                     <constraint firstAttribute="width" secondItem="aFu-kq-LIL" secondAttribute="height" multiplier="1:1" id="DAp-Ek-oKf"/>
-                                    <constraint firstAttribute="width" secondItem="aFu-kq-LIL" secondAttribute="height" multiplier="1:1" id="xGr-oH-Agc"/>
                                 </constraints>
                                 <state key="normal" title="d6" image="d6"/>
                                 <userDefinedRuntimeAttributes>
@@ -97,12 +95,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVd-Tv-kbI">
-                                <rect key="frame" x="115" y="332" width="44" height="44"/>
+                                <rect key="frame" x="77.5" y="297" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xVd-Tv-kbI" secondAttribute="height" multiplier="1:1" id="Nn0-o0-Upx"/>
-                                    <constraint firstAttribute="width" secondItem="xVd-Tv-kbI" secondAttribute="height" multiplier="1:1" id="V2V-6F-Su3"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="asr-KE-mub"/>
-                                    <constraint firstAttribute="height" constant="44" id="oNe-Xp-KWQ"/>
+                                    <constraint firstAttribute="height" constant="80" id="oNe-Xp-KWQ"/>
                                 </constraints>
                                 <state key="normal" title="d8" image="d8"/>
                                 <userDefinedRuntimeAttributes>
@@ -113,10 +109,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-Li-eco">
-                                <rect key="frame" x="255" y="332" width="44" height="44"/>
+                                <rect key="frame" x="217.5" y="297" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UWI-Li-eco" secondAttribute="height" multiplier="1:1" id="QXb-Mu-GsJ"/>
-                                    <constraint firstAttribute="height" constant="44" id="y9q-9a-2h9"/>
+                                    <constraint firstAttribute="height" constant="80" id="y9q-9a-2h9"/>
                                 </constraints>
                                 <state key="normal" title="d10" image="d10"/>
                                 <userDefinedRuntimeAttributes>
@@ -127,10 +123,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-9E-ZRh">
-                                <rect key="frame" x="115" y="392" width="44" height="44"/>
+                                <rect key="frame" x="77.5" y="393" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wpp-9E-ZRh" secondAttribute="height" multiplier="1:1" id="GsJ-v5-GNk"/>
-                                    <constraint firstAttribute="height" constant="44" id="LbJ-sY-U87"/>
+                                    <constraint firstAttribute="height" constant="80" id="LbJ-sY-U87"/>
                                     <constraint firstAttribute="width" secondItem="Wpp-9E-ZRh" secondAttribute="height" multiplier="1:1" id="ipN-uX-jS8"/>
                                 </constraints>
                                 <state key="normal" title="d12" image="d12"/>
@@ -142,11 +138,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxR-c6-N0y">
-                                <rect key="frame" x="255" y="392" width="44" height="44"/>
+                                <rect key="frame" x="217.5" y="393" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zxR-c6-N0y" secondAttribute="height" multiplier="1:1" id="W0o-NJ-4w3"/>
-                                    <constraint firstAttribute="height" constant="44" id="cmO-ER-Adv"/>
-                                    <constraint firstAttribute="width" secondItem="zxR-c6-N0y" secondAttribute="height" multiplier="1:1" id="rsY-ku-z2r"/>
+                                    <constraint firstAttribute="height" constant="80" id="cmO-ER-Adv"/>
                                 </constraints>
                                 <state key="normal" title="d20" image="d20"/>
                                 <userDefinedRuntimeAttributes>
@@ -157,9 +152,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-LT-Mjo">
-                                <rect key="frame" x="185" y="452" width="44" height="44"/>
+                                <rect key="frame" x="147.5" y="489" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="nL6-og-DvP"/>
+                                    <constraint firstAttribute="width" constant="80" id="nL6-og-DvP"/>
                                     <constraint firstAttribute="width" secondItem="6Ce-LT-Mjo" secondAttribute="height" multiplier="1:1" id="pff-mV-VhA"/>
                                 </constraints>
                                 <state key="normal" title="d100" image="d100"/>
@@ -171,7 +166,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5W-OY-Ljb">
-                                <rect key="frame" x="32" y="796" width="350" height="50"/>
+                                <rect key="frame" x="32" y="601" width="311" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pob-aO-nSx"/>
                                 </constraints>
