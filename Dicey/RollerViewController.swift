@@ -30,6 +30,7 @@ class RollerViewController: UIViewController {
     var diceNumber = 1 {
         didSet {
             diceNumberTextField.text = "\(diceNumber)"
+            setStepperButtonsAccessibility(value: diceNumber)
         }
     }
     var selectedDie: Die?
@@ -38,6 +39,7 @@ class RollerViewController: UIViewController {
         super.viewDidLoad()
         
         setupButtonBorders()
+        setupAccessibility()
     }
     
     func setupButtonBorders() {
@@ -46,23 +48,64 @@ class RollerViewController: UIViewController {
         plusButton.layer.borderWidth = 1
         plusButton.layer.cornerRadius = 10
         
-        d4Button.layer.borderWidth = 1
+        d4Button.setImage(UIImage(named: "d4_selected"), for: .selected)
         d4Button.layer.cornerRadius = 10
-        d6Button.layer.borderWidth = 1
+        d4Button.layer.masksToBounds = true
+        
+        d6Button.setImage(UIImage(named: "d6_selected"), for: .selected)
         d6Button.layer.cornerRadius = 10
-        d8Button.layer.borderWidth = 1
+        d6Button.layer.masksToBounds = true
+        
+        d8Button.setImage(UIImage(named: "d8_selected"), for: .selected)
         d8Button.layer.cornerRadius = 10
-        d10Button.layer.borderWidth = 1
+        d8Button.layer.masksToBounds = true
+        
+        d10Button.setImage(UIImage(named: "d10_selected"), for: .selected)
         d10Button.layer.cornerRadius = 10
-        d12Button.layer.borderWidth = 1
+        d10Button.layer.masksToBounds = true
+        
+        d12Button.setImage(UIImage(named: "d12_selected"), for: .selected)
         d12Button.layer.cornerRadius = 10
-        d20Button.layer.borderWidth = 1
+        d12Button.layer.masksToBounds = true
+        
         d20Button.layer.cornerRadius = 10
-        d100Button.layer.borderWidth = 1
+        d20Button.setImage(UIImage(named: "d20_selected"), for: .selected)
+        d20Button.layer.masksToBounds = true
+        
         d100Button.layer.cornerRadius = 10
+        d100Button.setImage(UIImage(named: "d100_selected"), for: .selected)
+        d100Button.layer.masksToBounds = true
         
         rollButton.layer.borderWidth = 1
         rollButton.layer.cornerRadius = 10
+    }
+    
+    @objc func setupAccessibility() {
+        setResultAccessibility(value: Int(resultLabel.text!)!)
+        setStepperButtonsAccessibility(value: diceNumber)
+        
+        d4Button.accessibilityHint = "Tap to select d4 for rolling"
+        d6Button.accessibilityHint = "Tap to select d6 for rolling"
+        d8Button.accessibilityHint = "Tap to select d8 for rolling"
+        d10Button.accessibilityHint = "Tap to select d10 for rolling"
+        d12Button.accessibilityHint = "Tap to select d12 for rolling"
+        d20Button.accessibilityHint = "Tap to select d20 for rolling"
+        d100Button.accessibilityHint = "Tap to select d100 for rolling"
+        
+
+    }
+    
+    func setResultAccessibility(value: Int) {
+        resultLabel.accessibilityLabel = "Roll result"
+        resultLabel.accessibilityHint = "Current value: \(value)"
+        resultLabel.accessibilityTraits = .updatesFrequently
+    }
+    
+    func setStepperButtonsAccessibility(value: Int) {
+        minusButton.accessibilityLabel = "Subtract from number of dice being rolled"
+        minusButton.accessibilityHint = "Current number: \(value)"
+        plusButton.accessibilityLabel = "Add to number of dice being rolled"
+        plusButton.accessibilityHint = "Current number: \(value)"
     }
     
     func setSelected(_ button: UIButton) {
@@ -79,6 +122,12 @@ class RollerViewController: UIViewController {
         }
         
         return result
+    }
+    
+    func updateTotal(_ value: Int) {
+        resultLabel.text = "\(value)"
+        
+        setResultAccessibility(value: value)
     }
 
     // MARK: - Actions
@@ -133,6 +182,7 @@ class RollerViewController: UIViewController {
     @IBAction func rollTapped(_ sender: UIButton) {
         guard let selectedDie = selectedDie else { return }
         
-        resultLabel.text = "\(roll(diceNumber, selectedDie))"
+        updateTotal(roll(diceNumber, selectedDie))
+        UIAccessibility.post(notification: .layoutChanged, argument: resultLabel)
     }
 }
