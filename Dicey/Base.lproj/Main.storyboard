@@ -156,15 +156,13 @@
                                     <action selector="d20Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1v-NF-sx9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-LT-Mjo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-LT-Mjo">
                                 <rect key="frame" x="185" y="452" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="nL6-og-DvP"/>
+                                    <constraint firstAttribute="width" constant="44" id="nL6-og-DvP"/>
                                     <constraint firstAttribute="width" secondItem="6Ce-LT-Mjo" secondAttribute="height" multiplier="1:1" id="pff-mV-VhA"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="q2n-9I-trX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="d100"/>
+                                <state key="normal" title="d100" image="d100"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -250,6 +248,7 @@
     </scenes>
     <resources>
         <image name="d10" width="137" height="137"/>
+        <image name="d100" width="137" height="137"/>
         <image name="d12" width="137" height="137"/>
         <image name="d20" width="137" height="137"/>
         <image name="d4" width="137" height="137"/>

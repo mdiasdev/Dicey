@@ -72,8 +72,9 @@ class RollerViewController: UIViewController {
         d20Button.setImage(UIImage(named: "d20_selected"), for: .selected)
         d20Button.layer.masksToBounds = true
         
-        d100Button.layer.borderWidth = 1
         d100Button.layer.cornerRadius = 10
+        d100Button.setImage(UIImage(named: "d100_selected"), for: .selected)
+        d100Button.layer.masksToBounds = true
         
         rollButton.layer.borderWidth = 1
         rollButton.layer.cornerRadius = 10
