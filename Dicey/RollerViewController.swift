@@ -35,18 +35,30 @@ class RollerViewController: UIViewController {
     }
     var selectedDie: Die?
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        hidesBottomBarWhenPushed = true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupButtonBorders()
         setupAccessibility()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        setTabBarVisibility()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        setTabBarVisibility()
+        super.viewWillLayoutSubviews()
+    }
+    
+    func setTabBarVisibility() {
+        guard let tabBarController = tabBarController else { return }
+        
+        if traitCollection.horizontalSizeClass == .compact {
+            // load slim view
+            tabBarController.setTabBar(hidden: false)
+        } else {
+            // load wide view
+            tabBarController.setTabBar(hidden: true)
+        }
     }
     
     func setupButtonBorders() {
