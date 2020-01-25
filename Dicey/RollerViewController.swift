@@ -41,6 +41,12 @@ class RollerViewController: UIViewController {
         setupButtonBorders()
         setupAccessibility()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        tabBarController?.setTabBar(hidden: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         setTabBarVisibility()
     }
     
