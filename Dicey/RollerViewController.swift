@@ -35,11 +35,18 @@ class RollerViewController: UIViewController {
     }
     var selectedDie: Die?
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        hidesBottomBarWhenPushed = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupButtonBorders()
         setupAccessibility()
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func setupButtonBorders() {
