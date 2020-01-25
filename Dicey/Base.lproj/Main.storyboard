@@ -8,22 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dummy View Controller-->
-        <scene sceneID="QHi-j3-QxE">
-            <objects>
-                <viewController id="fOl-7d-iTo" customClass="DummyViewController" customModule="Dicey" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dba-Yk-0a2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="p6h-Zk-BfI"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BD0-0O-SZh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6zK-tv-iZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1881" y="139"/>
-        </scene>
         <!--Roller View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -33,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G66-WD-5rJ">
-                                <rect key="frame" x="16" y="60" width="343" height="14"/>
+                                <rect key="frame" x="16" y="104" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71G-eO-p4F">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71G-eO-p4F">
                                 <rect key="frame" x="147.5" y="90" width="80" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="4mV-pm-Z3C"/>
@@ -46,7 +30,7 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO9-Fr-Bft">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iO9-Fr-Bft">
                                 <rect key="frame" x="95.5" y="85" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="h5W-RN-smd"/>
@@ -64,7 +48,7 @@
                                     <action selector="minusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJN-jq-0XY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVP-BC-CpQ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVP-BC-CpQ">
                                 <rect key="frame" x="235.5" y="85" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qVP-BC-CpQ" secondAttribute="height" multiplier="1:1" id="B3Y-HB-yoK"/>
@@ -82,7 +66,7 @@
                                     <action selector="plusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEP-hN-9Jq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-BW-0d7">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-BW-0d7">
                                 <rect key="frame" x="77.5" y="201" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7gg-BW-0d7" secondAttribute="height" multiplier="1:1" id="H6D-X6-EuL"/>
@@ -96,7 +80,7 @@
                                     <action selector="d4Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZfB-iG-1Pq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-kq-LIL">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-kq-LIL">
                                 <rect key="frame" x="217.5" y="201" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="7N1-Rt-E3Z"/>
@@ -110,7 +94,7 @@
                                     <action selector="d6Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WG1-NI-F0w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVd-Tv-kbI">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVd-Tv-kbI">
                                 <rect key="frame" x="77.5" y="297" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xVd-Tv-kbI" secondAttribute="height" multiplier="1:1" id="Nn0-o0-Upx"/>
@@ -124,7 +108,7 @@
                                     <action selector="d8Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3j-Nr-Sn9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-Li-eco">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWI-Li-eco">
                                 <rect key="frame" x="217.5" y="297" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UWI-Li-eco" secondAttribute="height" multiplier="1:1" id="QXb-Mu-GsJ"/>
@@ -138,7 +122,7 @@
                                     <action selector="d10Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mIf-21-SvT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-9E-ZRh">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpp-9E-ZRh">
                                 <rect key="frame" x="77.5" y="393" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wpp-9E-ZRh" secondAttribute="height" multiplier="1:1" id="GsJ-v5-GNk"/>
@@ -153,7 +137,7 @@
                                     <action selector="d12Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TlR-tM-zGP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxR-c6-N0y">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxR-c6-N0y">
                                 <rect key="frame" x="217.5" y="393" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zxR-c6-N0y" secondAttribute="height" multiplier="1:1" id="W0o-NJ-4w3"/>
@@ -167,7 +151,7 @@
                                     <action selector="d20Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1v-NF-sx9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-LT-Mjo">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-LT-Mjo">
                                 <rect key="frame" x="147.5" y="489" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="nL6-og-DvP"/>
@@ -182,7 +166,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5W-OY-Ljb">
-                                <rect key="frame" x="32" y="601" width="311" height="50"/>
+                                <rect key="frame" x="32" y="552" width="311" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pob-aO-nSx"/>
                                 </constraints>
@@ -255,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2665" y="139"/>
+            <point key="canvasLocation" x="1959" y="139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="T2n-4i-e7j">
@@ -286,7 +270,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fOl-7d-iTo" kind="relationship" relationship="rootViewController" id="v4x-fV-kNR"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KT6-hh-y0S"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xaw-5R-qbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
