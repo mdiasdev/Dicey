@@ -11,21 +11,12 @@ import UIKit
 class RollerViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     
-    @IBOutlet var minusButton: UIButton!
-    @IBOutlet var diceNumberTextField: UITextField!
-    @IBOutlet var plusButton: UIButton!
-    
     @IBOutlet weak var diceCollectionView: UICollectionView!
     
     @IBOutlet var rollButton: UIButton!
     
     let diceCollectionViewController = DiceCollectionViewController()
     var selectedDie: Die?
-    var diceNumber = 1 {
-        didSet {
-            diceNumberTextField.text = "\(diceNumber)"
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,17 +64,6 @@ class RollerViewController: UIViewController {
         
 //        d4Button.accessibilityLabel = "d4"
 //        d4Button.accessibilityHint = "Tap to select d4 for rolling"
-        
-        minusButton.isAccessibilityElement = false
-        plusButton.isAccessibilityElement = false
-        
-        diceNumberTextField.accessibilityHint = "Number of dice to roll"
-        
-        if UIAccessibility.isVoiceOverRunning {
-            diceNumberTextField.isUserInteractionEnabled = true
-        } else {
-            diceNumberTextField.isUserInteractionEnabled = false
-        }
     }
     
     func setResultAccessibility(value: Int) {
@@ -115,22 +95,10 @@ class RollerViewController: UIViewController {
 
     // MARK: - Actions
     
-    @IBAction func minusTapped(_ sender: Any) {
-        guard diceNumber > 1 else { return }
-        
-        diceNumber -= 1
-    }
-    
-    @IBAction func plusTapped(_ sender: Any) {
-        guard diceNumber < 100 else { return }
-        
-        diceNumber += 1
-    }
-    
     @IBAction func rollTapped(_ sender: UIButton) {
         guard let selectedDie = selectedDie else { return }
         
-        updateTotal(roll(diceNumber, selectedDie))
+        updateTotal(roll(1, selectedDie)) // TODO: update with real values to roll
         UIAccessibility.post(notification: .layoutChanged, argument: resultLabel)
     }
 }
