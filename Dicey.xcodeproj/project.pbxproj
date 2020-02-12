@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D5BF65D23E60DF300CC273B /* DieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF65C23E60DF300CC273B /* DieCollectionViewCell.swift */; };
 		6D5BF65F23E60E9F00CC273B /* DiceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF65E23E60E9F00CC273B /* DiceCollectionViewController.swift */; };
+		6D5BF66123EF410000CC273B /* DiePopoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF66023EF410000CC273B /* DiePopoutViewController.swift */; };
 		6D77A253239C29D9005107EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D77A252239C29D9005107EE /* AppDelegate.swift */; };
 		6D77A25A239C29D9005107EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D77A258239C29D9005107EE /* Main.storyboard */; };
 		6D77A25C239C29DB005107EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D77A25B239C29DB005107EE /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		6D5BF65C23E60DF300CC273B /* DieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DieCollectionViewCell.swift; sourceTree = "<group>"; };
 		6D5BF65E23E60E9F00CC273B /* DiceCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceCollectionViewController.swift; sourceTree = "<group>"; };
+		6D5BF66023EF410000CC273B /* DiePopoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiePopoutViewController.swift; sourceTree = "<group>"; };
 		6D77A24F239C29D9005107EE /* Dicey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dicey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D77A252239C29D9005107EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D77A259239C29D9005107EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				6DFB45F2239C370000CD8CF4 /* Die.swift */,
 				6D5BF65C23E60DF300CC273B /* DieCollectionViewCell.swift */,
 				6D5BF65E23E60E9F00CC273B /* DiceCollectionViewController.swift */,
+				6D5BF66023EF410000CC273B /* DiePopoutViewController.swift */,
 			);
 			path = Dicey;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D5BF66123EF410000CC273B /* DiePopoutViewController.swift in Sources */,
 				6DFB45EE239C2AD500CD8CF4 /* RollerViewController.swift in Sources */,
 				6DCE1DFC23DCD7B900934C5E /* UITabBarController.swift in Sources */,
 				6D77A253239C29D9005107EE /* AppDelegate.swift in Sources */,
