@@ -23,6 +23,7 @@ class RollerViewController: UIViewController {
         
         diceCollectionView.delegate = diceCollectionViewController
         diceCollectionView.dataSource = diceCollectionViewController
+        diceCollectionViewController.selectableDelegate = self
         
         setupButtonBorders()
         setupAccessibility()
@@ -100,5 +101,22 @@ class RollerViewController: UIViewController {
         
         updateTotal(roll(1, selectedDie)) // TODO: update with real values to roll
         UIAccessibility.post(notification: .layoutChanged, argument: resultLabel)
+    }
+}
+
+// MARK: - DieSelectable
+extension RollerViewController: DieSelectable {
+    func didSelect(die: Die) {
+        // make pop out
+        guard let popout = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DiePopout") as? DiePopoutViewController else { return }
+            
+        _ = popout.view
+        popout.imageView.image = die.image()
+        popout.modalPresentationStyle = .custom
+        popout.modalTransitionStyle = .crossDissolve
+        popout.providesPresentationContextTransitionStyle = true
+        popout.definesPresentationContext = true
+        
+        self.present(popout, animated: true, completion: nil)
     }
 }

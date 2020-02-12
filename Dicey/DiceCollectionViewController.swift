@@ -12,6 +12,8 @@ private let reuseIdentifier = "Die"
 
 class DiceCollectionViewController: UICollectionViewController {
     let dice: [Die] = [.d4, .d6, .d8, .d10, .d12, .d20, .d100]
+    
+    weak var selectableDelegate: DieSelectable?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,24 @@ class DiceCollectionViewController: UICollectionViewController {
         let die = dice[indexPath.row]
         
         cell.imageView.image = die.image()
+        cell.die = die
     
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? DieCollectionViewCell else { return }
+        
+        selectableDelegate?.didSelect(die: cell.die)
+    }
 
+}
+
+// TODO: find a better spot for these
+protocol DieSelectable: class {
+    func didSelect(die: Die)
+}
+
+protocol DieValueContainable: class {
+    func updateValue(count: Int)
 }
