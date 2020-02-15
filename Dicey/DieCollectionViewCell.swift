@@ -10,12 +10,7 @@ import UIKit
 
 class DieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    
     var die: Die!
     var count = 0
-}
-
-extension DieCollectionViewCell: DieValueContainable {
-    func updateValue(count: Int) {
-        self.count = count
-    }
 }
