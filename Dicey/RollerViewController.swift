@@ -116,17 +116,54 @@ class RollerViewController: UIViewController {
 
 // MARK: - DieSelectable
 extension RollerViewController: DieSelectable {
-    func didSelect(die: Die) {
+    func didSelect(die: Die, count: Int) {
         // make pop out
         guard let popout = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DiePopout") as? DiePopoutViewController else { return }
             
-        _ = popout.view
-        popout.imageView.image = die.image()
+        popout.set(die: die, count: count)
         popout.modalPresentationStyle = .custom
         popout.modalTransitionStyle = .crossDissolve
         popout.providesPresentationContextTransitionStyle = true
         popout.definesPresentationContext = true
+        popout.valueDelegate = self
         
         self.present(popout, animated: true, completion: nil)
     }
 }
+
+extension RollerViewController: DieValueContainable {
+    func updateValue(die: Die, count: Int) {
+        guard count > 0 else { return }
+        
+        if let index = diceToRoll.firstIndex(where: { return $0.0 == die }) {
+            diceToRoll[index] = (die, count)
+        } else {
+            diceToRoll += [(die, count)]
+        }
+        
+        rollingLabel.text = diceToRollString(from: rollingLabel.text ?? "", die: die, count: count)
+        
+        guard let index = diceCollectionViewController.dice.firstIndex(where: { $0.die == die }) else { return }
+        
+        diceCollectionViewController.dice[index] = (die, count)
+        diceCollectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+    }
+    
+    func diceToRollString(from labelText: String, die: Die, count: Int) -> String {
+        var labelText = labelText
+        
+        guard labelText.contains("d\(die.rawValue)") else {
+            labelText.append(die: die, count: count)
+            return labelText
+        }
+        
+        var dice = labelText.components(separatedBy: ", ") // [1d6,10d4]
+        
+        guard let index = dice.firstIndex(where: { $0.contains("d\(die.rawValue)") }) else { return "" }
+        
+        dice[index] = "\(count)d\(die.rawValue)"
+        
+        return dice.joined(separator: ", ")
+    }
+}
+

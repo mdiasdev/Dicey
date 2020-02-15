@@ -17,8 +17,10 @@ class DiePopoutViewController: UIViewController {
     @IBOutlet weak var popoutContainer: UIView!
     
     weak var valueDelegate: DieValueContainable?
+    var die: Die!
     var value = 0 {
         didSet {
+            guard valueLabel != nil else { return }
             valueLabel.text = "\(value)"
         }
     }
@@ -27,12 +29,21 @@ class DiePopoutViewController: UIViewController {
         super.viewDidLoad()
         
         popoutContainer.layer.cornerRadius = 12
+        valueLabel.text = "\(value)"
+        stepper.value = Double(value)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        imageView.image = die.image()
+        
         animateView()
+    }
+    
+    func set(die: Die, count: Int) {
+        self.die = die
+        self.value = count
     }
     
     func animateView() {
@@ -56,7 +67,7 @@ class DiePopoutViewController: UIViewController {
     }
     
     @IBAction func doneTapped(_ sender: Any) {
-        valueDelegate?.updateValue(count: value)
+        valueDelegate?.updateValue(die: die, count: value)
         
         dismiss(animated: true, completion: nil)
     }

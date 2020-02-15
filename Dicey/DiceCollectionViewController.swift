@@ -11,9 +11,16 @@ import UIKit
 private let reuseIdentifier = "Die"
 
 class DiceCollectionViewController: UICollectionViewController {
-    let dice: [Die] = [.d4, .d6, .d8, .d10, .d12, .d20, .d100]
+    var dice: [(die: Die, count: Int)] = [(.d4, 0),
+                                           (.d6, 0),
+                                           (.d8, 0),
+                                           (.d10, 0),
+                                           (.d12, 0),
+                                           (.d20, 0),
+                                           (.d100, 0)]
     
     weak var selectableDelegate: DieSelectable?
+    weak var dieValueDelegate: DieValueContainable?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +41,9 @@ class DiceCollectionViewController: UICollectionViewController {
     
         let die = dice[indexPath.row]
         
-        cell.imageView.image = die.image()
-        cell.die = die
+        cell.imageView.image = die.die.image()
+        cell.die = die.die
+        cell.count = die.count
     
         return cell
     }
@@ -43,16 +51,16 @@ class DiceCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? DieCollectionViewCell else { return }
         
-        selectableDelegate?.didSelect(die: cell.die)
+        selectableDelegate?.didSelect(die: cell.die, count: cell.count)
     }
 
 }
 
 // TODO: find a better spot for these
 protocol DieSelectable: class {
-    func didSelect(die: Die)
+    func didSelect(die: Die, count: Int)
 }
 
 protocol DieValueContainable: class {
-    func updateValue(count: Int)
+    func updateValue(die: Die, count: Int)
 }
