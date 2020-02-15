@@ -10,13 +10,12 @@ import UIKit
 
 class RollerViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
-    
+    @IBOutlet weak var rollingLabel: UILabel!
     @IBOutlet weak var diceCollectionView: UICollectionView!
-    
     @IBOutlet var rollButton: UIButton!
     
     let diceCollectionViewController = DiceCollectionViewController()
-    var selectedDie: Die?
+    var diceToRoll: [(die: Die, count: Int)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,11 +94,22 @@ class RollerViewController: UIViewController {
     }
 
     // MARK: - Actions
+    @IBAction func resetTapped(_ sender: Any) {
+        rollingLabel.text = ""
+        diceToRoll = []
+    }
     
     @IBAction func rollTapped(_ sender: UIButton) {
-        guard let selectedDie = selectedDie else { return }
+        guard !diceToRoll.isEmpty else { return }
+        var total = 0
         
-        updateTotal(roll(1, selectedDie)) // TODO: update with real values to roll
+        diceToRoll.forEach { pair in
+            for _ in 1...pair.count {
+                total += roll(1, pair.die)
+            }
+        }
+        
+        updateTotal(total)
         UIAccessibility.post(notification: .layoutChanged, argument: resultLabel)
     }
 }
