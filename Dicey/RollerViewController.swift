@@ -34,23 +34,29 @@ class RollerViewController: UIViewController {
         super.viewWillAppear(animated)
         
         setTabBarVisibility()
+        view.updateConstraintsIfNeeded()
     }
     
     override func viewWillLayoutSubviews() {
         setTabBarVisibility()
+        
         super.viewWillLayoutSubviews()
+        
+        rollButton.updateConstraintsIfNeeded()
     }
     
     func setTabBarVisibility() {
         guard let tabBarController = tabBarController else { return }
         
-        if traitCollection.horizontalSizeClass == .compact {
+        if traitCollection.horizontalSizeClass == .compact || traitCollection.verticalSizeClass == .compact {
             // load slim view
             tabBarController.setTabBar(hidden: false)
         } else {
             // load wide view
             tabBarController.setTabBar(hidden: true)
         }
+        
+        rollButton.setNeedsUpdateConstraints()
     }
     
     func setupButtonBorders() {
